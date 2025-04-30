@@ -1,0 +1,21 @@
+.page {
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.title {
+  font-size: 150px;
+  margin-bottom: 20px;
+  color: #333;
+}
