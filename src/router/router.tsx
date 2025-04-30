@@ -1,5 +1,5 @@
 const Router = () => {
-  return <></>;
+  return <>Router</>;
 };
 
 export default Router;
