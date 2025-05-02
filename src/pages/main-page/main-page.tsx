@@ -12,6 +12,7 @@ const DEFAULT_COUNT = 0;
 
 const MainPage = () => {
   const [count, setCount] = useState(DEFAULT_COUNT);
+  console.log('Count:', count);
 
   console.log('Rendering MainPage');
 
