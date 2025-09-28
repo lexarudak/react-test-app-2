@@ -20,7 +20,6 @@ const MyButton: FC<Props> = ({
   onClick,
   children,
   variant = BUTTON_VARIANT.PRIMARY,
-  myType = BUTTON_TYPE.basic,
 }) => {
   const buttonClass = `${styles.button} ${variant === BUTTON_VARIANT.PRIMARY ? styles.primary : styles.secondary}`;
 
