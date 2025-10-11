@@ -1,48 +1,14 @@
-import { useState } from 'react';
 import './App.css';
-import React from 'react';
-import { jsxs as _jsxs, jsx as _jsx } from 'react/jsx-runtime';
+import { ComponentJSX } from './conspect-coponents/component-jsx';
+import { State } from './conspect-coponents/state';
 
-type ButtonProps = {
-  onClick: () => void;
-  children: React.ReactNode;
-};
-
-const Button = ({ onClick, children }: ButtonProps) => {
-  return React.createElement('button', { onClick }, children);
-};
-
-const Banner = ({ children }: { children: React.ReactNode }) => {
-  const a = React.createElement(
-    'div',
-    { className: 'banner' },
-    React.createElement('span', null, children),
-  );
-
-  console.log(a);
-  return a;
-};
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  const onClick = () => {
-    setCount((prev) => prev + 1);
-  };
-
+const App = () => {
   return (
     <>
-      <Banner children={count} />
-      <Button onClick={onClick}>Increase</Button>
+      <ComponentJSX />
+      <State />
     </>
   );
-
-  // return _jsxs(React.Fragment, {
-  //   children: [
-  //     _jsx(Banner, { children: count }),
-  //     _jsx(Button, { onClick, children: 'Increment' }),
-  //   ],
-  // });
-}
+};
 
 export default App;
