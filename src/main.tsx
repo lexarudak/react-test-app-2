@@ -4,6 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 
 import _clone from 'lodash/cloneDeep';
 
+const useA = () => {
+  const [state] = useState(2);
+
+  return <p>{state}</p>;
+};
+
 const useFiber = () => {
   const ref = useRef<HTMLDivElement>(null);
   const getFiber = () => {
@@ -23,6 +29,7 @@ export const AppFiber = () => {
   console.log('AppFiber render');
   const [count, setCount] = useState(42);
   const [ref, getFiber] = useFiber();
+  const W = useA;
 
   const onClick = () => {
     setCount(5);
@@ -38,8 +45,9 @@ export const AppFiber = () => {
   return (
     <div ref={ref}>
       <h2>App Fiber</h2>
-      <p>Count: {count}</p>
-      <button onClick={onClick}>Increment</button>
+      <p>Count: {count}</p>s<button onClick={onClick}>Increment</button>
+      {useA()}
+      <W />
     </div>
   );
 };
