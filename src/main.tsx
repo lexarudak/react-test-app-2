@@ -3,6 +3,7 @@ import './index.css';
 import { useEffect, useRef, useState } from 'react';
 
 import _clone from 'lodash/cloneDeep';
+import App from './App';
 
 const useA = () => {
   const [state] = useState(2);
@@ -55,5 +56,13 @@ export const AppFiber = () => {
 const a = createRoot(document.getElementById('root')!);
 console.log(a);
 
-// a.render(<App />);
-a.render(<AppFiber />);
+a.render(<App />);
+// a.render(<AppFiber />);
+
+// const c = {
+//   type: App,
+//   props: {},
+//   key: null,
+//   ref: null,
+//   $$typeof: Symbol(react.element),
+// };

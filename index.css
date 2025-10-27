@@ -1,0 +1,14 @@
+#root {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root.root {
+  background-color: blue;
+}
+
+.root.root.root.root.root.root.root.root.root.root.root {
+  background-color: green;
+}
