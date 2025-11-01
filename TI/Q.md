@@ -4,10 +4,10 @@
 
 + * React component definition (functional component)
 + * JSX (embedding expressions, attributes, children)
-* React component state (initial state, useState, lazy initialization)
-* React component lifecycle (render, pre-commit, commit, error boundaries)
-* Hooks (types, use cases, rules)
-* Components composition (props.children, inheritance vs composition, lifting state up, decomposition task)
++ * React component state (initial state, useState, lazy initialization)
++ * React component lifecycle (render, pre-commit, commit, error boundaries)
++ * Hooks (types, use cases, rules)
++ * Components composition (props.children, inheritance vs composition, lifting state up, decomposition task)
 
 ### Intermediate
 

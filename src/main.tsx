@@ -3,7 +3,9 @@ import './index.css';
 import { useEffect, useRef, useState } from 'react';
 
 import _clone from 'lodash/cloneDeep';
-import App from './App';
+import { Buttons } from './conspect-coponents/buttons';
+import { useValeraContext, ValeraContext } from './conspect-coponents/constext';
+import { ButtonsApp } from './conspect-coponents/buttons-app';
 
 const useA = () => {
   const [state] = useState(2);
@@ -56,8 +58,9 @@ export const AppFiber = () => {
 const a = createRoot(document.getElementById('root')!);
 console.log(a);
 
-a.render(<App />);
+// a.render(<App />);
 // a.render(<AppFiber />);
+a.render(<ButtonsApp />);
 
 // const c = {
 //   type: App,

@@ -1,3 +1,12 @@
+import { useContext } from 'react';
+import { ValeraContext } from './constext';
+
+type Item = {
+  id: string;
+  type: string;
+  an?: string;
+};
+
 const items = [
   {
     id: 'bk-0001',
@@ -10,25 +19,38 @@ const items = [
   },
 ];
 
+const mapper = (item: Item) => (idx: number) => () => {
+  if (item.type === 'book') {
+    console.log(`${item.type}/${item.id}/${idx}`);
+  } else if (item.type === 'magazine') {
+    console.log(`${item.type}/${item.id}/${item.an}/${idx}`);
+  }
+};
+
 const onClickHandlers = items.map(mapper);
 
-function mapper(item: { id: string; type: string; an?: string }) {
-  const { id, type, an } = item;
-  const itemMeta = [type, id, an].filter(Boolean).join('/');
+export function Buttons() {
+  const context = useContext(ValeraContext);
 
-  return function (index: number) {
-    return function () {
-      console.log(itemMeta + '/' + index);
-    };
-  };
-}
+  if (!context) {
+    return null;
+  }
 
-export function App() {
+  const { name, age } = context;
+  const [valeraName, setValeraName] = name;
+  const [valeraAge, setValeraAge] = age;
+
   return (
     <div>
       {onClickHandlers.map((onClick, idx) => (
-        <button key={idx} onClick={onClick(idx)}>
-          {idx}
+        <button
+          key={idx}
+          onClick={() => {
+            setValeraAge(valeraAge + 1);
+          }}
+        >
+          {valeraName}
+          {valeraAge}
         </button>
       ))}
     </div>
