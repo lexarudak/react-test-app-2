@@ -3,8 +3,6 @@ import './index.css';
 import { useEffect, useRef, useState } from 'react';
 
 import _clone from 'lodash/cloneDeep';
-import { Buttons } from './conspect-coponents/buttons';
-import { useValeraContext, ValeraContext } from './conspect-coponents/constext';
 import { ButtonsApp } from './conspect-coponents/buttons-app';
 
 const useA = () => {
