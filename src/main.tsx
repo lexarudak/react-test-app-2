@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import _clone from 'lodash/cloneDeep';
 import { ButtonsApp } from './conspect-coponents/buttons-app';
+import { FormApp } from './conspect-coponents/ forms';
 
 const useA = () => {
   const [state] = useState(2);
@@ -58,7 +59,8 @@ console.log(a);
 
 // a.render(<App />);
 // a.render(<AppFiber />);
-a.render(<ButtonsApp />);
+// a.render(<ButtonsApp />);
+a.render(<FormApp />);
 
 // const c = {
 //   type: App,
