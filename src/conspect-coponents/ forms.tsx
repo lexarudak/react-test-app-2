@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useActionState, useRef, useState } from 'react';
 
 type Props = {
   setErrors: React.Dispatch<React.SetStateAction<string[]>>;
@@ -30,6 +30,8 @@ const InputField = ({ setErrors }: Props) => {
   return <input value={value} onChange={onChange} />;
 };
 
+  
+
 export const FormApp = () => {
   const ref = useRef<HTMLFormElement>(null);
 
@@ -44,10 +46,13 @@ export const FormApp = () => {
   };
 
   return (
-    <form ref={ref} onSubmit={onSubmit}>
-      <input type="text" name="username" defaultValue="123" />
-      <input type="password" name="password" defaultValue="password" />
-      <button>Submit</button>
-    </form>
+    <>
+      <form ref={ref} onSubmit={onSubmit}>
+        <input type="text" name="username" defaultValue="123" />
+        <input type="password" name="password" defaultValue="password" />
+        <button>Submit</button>
+      </form>
+      <ReactNewForm />
+    </>
   );
 };
