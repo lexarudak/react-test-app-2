@@ -30,8 +30,6 @@ const InputField = ({ setErrors }: Props) => {
   return <input value={value} onChange={onChange} />;
 };
 
-  
-
 export const FormApp = () => {
   const ref = useRef<HTMLFormElement>(null);
 
