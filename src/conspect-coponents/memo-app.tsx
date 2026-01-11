@@ -8,11 +8,14 @@ const JustOtherComponent = () => {
 const Parent: FC<PropsWithChildren> = ({ children }) => {
   const [count, setCount] = useState(0);
 
-  const onClick = () => setCount(count + 1);
+  const onClick = (e) => {
+    console.log(e);
+  };
   return (
     <div>
       <p>Count: {count}</p>
       <button onClick={onClick}>+</button>
+      <input type="text" onChange={(e) => console.log(e)} />
       {children}
     </div>
   );
