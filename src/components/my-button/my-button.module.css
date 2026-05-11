@@ -1,0 +1,12 @@
+.button {
+  margin: 20px;
+
+  &.primary {
+    background-color: blueviolet
+  }
+
+  &.secondary {
+    background-color: lightblue
+  }
+
+}

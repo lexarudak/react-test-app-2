@@ -1,1 +1,3 @@
-# react-test-app-2
+- Update main page
+- Add home page
+
